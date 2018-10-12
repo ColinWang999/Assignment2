@@ -12,6 +12,9 @@ div{
 	text-align: center;
 	margin: 50px;
 }
+.title_h{
+	margin-top: 80px;
+}
 .content{
 	width: 100%;
 	height: 300px;
@@ -80,10 +83,10 @@ div{
 <body>
 <div id="title"><h2>This is some information about Assignment 2.</h2></div>
 
-
+<h2 class="title_h">Step 1</h2>
 <div class="content" id="structure">
 	<p class="left">
-		<button class="title_button">Structure</button>
+		<button class="title_button" onclick="document.getElementById('main_structure').style.display='block'">Structure</button>
 		<span class="title_span">
 			First step is to structure it, make sure you have the main body of this assignment.
 		</span>
@@ -135,11 +138,23 @@ div{
 		</span>
 	</div>
 	
+	<div class="text_div" id="main_structure" onclick="document.getElementById('main_structure').style.display='none'">
+		<span>
+			<img src="https://colinwang999.github.io/Assignment2/structure.jpg">
+			
+		</span>
+	</div>
+	
 </div>
 
+
+<h2 class="title_h">Step 2</h2>
 <div class="content" id="calculation">
 	<p class="left">
-		<button class="title_button">Calculation</button>
+		<button class="title_button" onclick="document.getElementById('excel').style.display='block'">Calculation</button>
+		<span class="title_span">
+			After you finish the structure, you can start to calculate all the data you need.
+		</span>
 	</p>
 	<p class="right">
 		<span><a href="javascript:void(0);" onclick="document.getElementById('devices_n').style.display='block'">How many devices in each network?</a></span>
@@ -153,7 +168,7 @@ div{
 			<h5>You can see a network could be find in different floors in diffrent buildings.</h5>
 			<h5>So it's better to create an Excel file to record it.</h5>
 			<h5>The data you should collect could be: VLAN/VLAN NUMBER/How many PCs/SUBNET MASK/DEFAULT ROUTER/IP RANGE.</h5>
-			<img src="excel 1.jpg">
+			
 		</span>
 	</div>
 	<div class="text_div" id="minimum_hosts" onclick="document.getElementById('minimum_hosts').style.display='none'">
@@ -170,11 +185,22 @@ div{
 			
 		</span>
 	</div>
+	<div class="text_div" id="excel" onclick="document.getElementById('excel').style.display='none'">
+		<span>
+			<img src="https://colinwang999.github.io/Assignment2/excel 1.jpg">
+			
+		</span>
+	</div>
 </div>
 
+
+<h2 class="title_h">Step 3</h2>
 <div class="content" id="configuration">
 	<p class="left">
 		<button class="title_button">Configuration</button>
+		<span class="title_span">
+			After you get all the materials ready, configure all the devices.
+		</span>
 	</p>
 	<p class="right">
 		<span><a href="javascript:void(0);" onclick="document.getElementById('core_switch').style.display='block'">Configure core switch?</a></span>
