@@ -88,14 +88,14 @@ div{
 	<p class="left">
 		<button class="title_button" onclick="document.getElementById('main_structure').style.display='block'" style="width:100%;">Structure</button>
 		<span class="title_span">
-			First step is to structure it, make sure you have the main body of this assignment.
-			Make 4 buildings as close as you can, if not, it may occurs some connection problem.
+			第一步：搭建大体结构。
+			(在physical界面中，几栋楼的距离尽量近一点，不然会出现无法连接。)
 		</span>
 	</p>
 	<p class="right">
-		<span><a href="javascript:void(0);" onclick="document.getElementById('buildings').style.display='block'">How many buildings? How many floors in each building?</a></span>
-		<span><a href="javascript:void(0);" onclick="document.getElementById('clusters').style.display='block'">How to take them in a cluster?</a></span>
-		<span><a href="javascript:void(0);" onclick="document.getElementById('devices').style.display='block'">How many devices in each floor?</a></span>
+		<span><a href="javascript:void(0);" onclick="document.getElementById('buildings').style.display='block'">有多少栋建筑？每栋建筑多少层楼？</a></span>
+		<span><a href="javascript:void(0);" onclick="document.getElementById('clusters').style.display='block'">如何构建一个“团(cluster)”?</a></span>
+		<span><a href="javascript:void(0);" onclick="document.getElementById('devices').style.display='block'">每一层楼有多少设备?</a></span>
 		<span><a href="javascript:void(0);" onclick="document.getElementById('servers').style.display='block'">Servers</a></span>
 		<span><a href="javascript:void(0);" onclick="document.getElementById('lab').style.display='block'">Security Lab</a></span>
 	</p>
@@ -103,9 +103,9 @@ div{
 	<!-- text divs -->
 	<div class="text_div" id="buildings" onclick="document.getElementById('buildings').style.display='none'">
 		<span>
-			<h5>In this assignment, there are totally 4 buildings, each building has 3 or 4 floors.</h5>
-			<h5>In every floor, there are several devices like PC, tablet, TV(you can regard it as a PC), and many wireless devices.</h5>
-			<h5>It is better to make every floor as a "Cluster".</h5>
+			<h5>总共有4栋楼，每一栋楼有3到4层.</h5>
+			<h5>每一层楼都有若干设备:PC/Tablet/TV(可以视作一台PC)，以及若干无线设备.</h5>
+			<h5>在我的作业中是将每一层作为一个"Cluster".</h5>
 				
 			
 		</span>
@@ -113,28 +113,28 @@ div{
 	
 	<div class="text_div" id="clusters" onclick="document.getElementById('clusters').style.display='none'">
 		<span>
-			<h5>Information could be found in WEEK 7 tutorial</h5>
+			<h5>如何构建一个cluster的知识，在WEEK7的tutorial中。</h5>
 			
 		</span>
 	</div>
 	
 	<div class="text_div" id="devices" onclick="document.getElementById('devices').style.display='none'">
 		<span>
-			<h5>You'd better new an Excel document to record how many devices in each floor.</h5>
+			<h5>推荐创建一个Excel的文档，记录一下每一栋楼有多少层，每一层有多少设备.</h5>
 			
 		</span>
 	</div>
 	
 	<div class="text_div" id="servers" onclick="document.getElementById('servers').style.display='none'">
 		<span>
-			<h5></h5>
+			<h5>Server做为一个设备对待就好。</h5>
 			
 		</span>
 	</div>
 	
 	<div class="text_div" id="lab" onclick="document.getElementById('lab').style.display='none'">
 		<span>
-			<h5>Security lab IP range is 10.200.0.0/16</h5>
+			<h5>Security lab 的 IP range 是 10.200.0.0/16</h5>
 			
 		</span>
 	</div>
@@ -154,35 +154,35 @@ div{
 	<p class="left">
 		<button class="title_button" onclick="document.getElementById('excel').style.display='block'">Calculation</button>
 		<span class="title_span">
-			After you finish the structure, you can start to calculate all the data you need.
+			当框架搭建完成之后，第二步，开始计算每个子网的信息。
 		</span>
 	</p>
 	<p class="right">
-		<span><a href="javascript:void(0);" onclick="document.getElementById('devices_n').style.display='block'">How many devices in each network?</a></span>
-		<span><a href="javascript:void(0);" onclick="document.getElementById('minimum_hosts').style.display='block'">How to calculate minimum numbers of each network?</a></span>
+		<span><a href="javascript:void(0);" onclick="document.getElementById('devices_n').style.display='block'">每个子网有多少个设备?</a></span>
+		<span><a href="javascript:void(0);" onclick="document.getElementById('minimum_hosts').style.display='block'">每个子网最低需要分配多少个IP?</a></span>
 		<span><a href="javascript:void(0);" onclick="document.getElementById('IPrange').style.display='block'">Start IP, end IP, IP range, and subnet mask?</a></span>
 	</p>
 	
 	<!-- text divs -->
 	<div class="text_div" id="devices_n" onclick="document.getElementById('devices_n').style.display='none'">
 		<span>
-			<h5>You can see a network could be find in different floors in diffrent buildings.</h5>
-			<h5>So it's better to create an Excel file to record it.</h5>
-			<h5>The data you should collect could be: VLAN/VLAN NUMBER/How many PCs/SUBNET MASK/DEFAULT ROUTER/IP RANGE.</h5>
+			<h5>一个网络可以存在于多个楼层.</h5>
+			<h5>所以你需要建立一个excel文档统计一下每个网络的信息.</h5>
+			<h5>这些信息包括: VLAN名字/VLAN NUMBER/How many PCs/SUBNET MASK/DEFAULT ROUTER/IP RANGE.</h5>
 			
 		</span>
 	</div>
 	<div class="text_div" id="minimum_hosts" onclick="document.getElementById('minimum_hosts').style.display='none'">
 		<span>
-			<h5>This is related to subnetting knowledge.</h5>
-			<h5>For example, if you have 12 devices, 12 is between 2^3=8 and 2^4=16.</h5>
-			<h5>So you need minimum 16 host IPs.</h5>
+			<h5>这涉及到的是子网划分的知识(subnetting).</h5>
+			<h5>例如, 如果你的网络有12台设备, 12 是介于 2^3=8 和 2^4=16之间.</h5>
+			<h5>所以你最少需要分配16个IP地址给这个网络.</h5>
 			
 		</span>
 	</div>
 	<div class="text_div" id="IPrange" onclick="document.getElementById('IPrange').style.display='none'">
 		<span>
-			<h5>You can find information in WEEK6-8 tutorial.</h5>
+			<h5>这些信息在WEEK 6-8 的tutorial中。 如果有遇到问题我们再找个时间讨论一下.</h5>
 			
 		</span>
 	</div>
